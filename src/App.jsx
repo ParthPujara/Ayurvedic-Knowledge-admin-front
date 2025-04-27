@@ -660,7 +660,14 @@ function App() {
                         </tr>
                         <tr>
                           <th>Synonymns</th>
-                          <td>{value.Synonymns}</td>
+                          <td>
+                            {value.Synonymns.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                         <tr>
                           <th>Botanical name</th>
@@ -672,7 +679,14 @@ function App() {
                         </tr>
                         <tr>
                           <th>Classification</th>
-                          <td>{value.Classification}</td>
+                          <td>
+                            {value.Classification.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                         <tr>
                           <th>Habitat</th>
@@ -684,7 +698,14 @@ function App() {
                         </tr>
                         <tr>
                           <th>Morphology</th>
-                          <td>{value.Morphology}</td>
+                          <td>
+                            {value.Morphology.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                         <tr>
                           <th>Useful part</th>
@@ -696,7 +717,14 @@ function App() {
                         </tr>
                         <tr>
                           <th>Rasapanchaka</th>
-                          <td>{value.Rasapanchaka}</td>
+                          <td>
+                            {value.Rasapanchaka.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                         <tr>
                           <th>Karma</th>
@@ -712,19 +740,47 @@ function App() {
                         </tr>
                         <tr>
                           <th>Amayika Prayoga:</th>
-                          <td>{value.Amayika_Prayoga}</td>
+                          <td>
+                            {value.Amayika_Prayoga.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                         <tr>
                           <th>Dose</th>
-                          <td>{value.Dose}</td>
+                          <td>
+                            {value.Dose.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                         <tr>
                           <th>Yoga formulation</th>
-                          <td>{value.Yoga_formulation}</td>
+                          <td>
+                            {value.Yoga_formulation.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                         <tr>
                           <th>Shlok</th>
-                          <td>{value.Shlok}</td>
+                          <td>
+                            {value.Shlok.map((item, index) => (
+                              <span key={index}>
+                                {item}
+                                <br />
+                              </span>
+                            ))}
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -804,10 +860,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Synonymns"
-                          value={drugValues.Synonymns.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Synonymns.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
@@ -843,10 +896,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Classification"
-                          value={drugValues.Classification.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Classification.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
@@ -898,10 +948,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Morphology"
-                          value={drugValues.Morphology.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Morphology.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
@@ -953,10 +1000,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Rasapanchaka"
-                          value={drugValues.Rasapanchaka.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Rasapanchaka.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
@@ -1026,10 +1070,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Amayika_Prayoga"
-                          value={drugValues.Amayika_Prayoga.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Amayika_Prayoga.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
@@ -1047,10 +1088,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Dose"
-                          value={drugValues.Dose.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Dose.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
@@ -1068,10 +1106,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Yoga_formulation"
-                          value={drugValues.Yoga_formulation.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Yoga_formulation.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
@@ -1089,10 +1124,7 @@ function App() {
                           className="w-100 rounded my-2"
                           type="text"
                           id="Shlok"
-                          value={drugValues.Shlok.toString().replace(
-                            /,/g,
-                            "\n"
-                          )}
+                          value={drugValues.Shlok.toString()}
                           onChange={(e) =>
                             setDrugValues((drugValues) => ({
                               ...drugValues,
